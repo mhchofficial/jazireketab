@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">jazireKetab</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dialog_login_enter">برای ادامه کار وارد حساب کاربری خود شوید یا ثبت نام کنید</string>
+    <string name="loginOrsignup">ورود | ثبت نام</string>
+    <string name="login">ورود</string>
+    <string name="login_dialog">شماره موبایل خود را وارد کنید</string>
+    <string name="enter_to_jazireKetab">ورود به جزیره کتاب</string>
+    <string name="privacy_and_policy">با ورود به جزیره کتاب، شرایط و قوانین استفاده از خدمات را می‌پذیرید</string>
+    <string name="enter_code">کد ارسال شده را وارد نمایید</string>
+    <string name="confirm_code">تایید کد</string>
+    <string name="signup">ثبت نام</string>
+    <string name="signup_dialog">مشخصات زیر را وارد کنید</string>
+    <string name="name_family">نام و نام خانوادگی</string>
+    <string name="sended_code">کد ارسال شده</string>
+    <string name="signup_to_jazireKetab">ثبت نام در جزیره‌کتاب</string>
+</resources>
