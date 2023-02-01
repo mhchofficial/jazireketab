@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    android:layoutDirection="rtl"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/name_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="محمد حسین چوازی"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/sans_medium"
+        android:textColor="@color/textColorBlack"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:gravity="end"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RatingBar
+            android:id="@+id/ratting"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:numStars="5"
+            android:isIndicator="true"
+            style="@style/Widget.AppCompat.RatingBar.Small"/>
+        <TextView
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1401/6/11"
+            android:textSize="@dimen/_7sdp"
+            android:fontFamily="@font/sans_medium"
+            android:textColor="@color/textColorGray"
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:src="@drawable/ic_liken"/>
+            <TextView
+                android:padding="@dimen/_2sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorBlack"
+                android:text="5"
+                android:textSize="@dimen/_7sdp"/>
+            <Space
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:padding="@dimen/_2sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColorBlack"
+                android:text="1"
+                android:textSize="@dimen/_7sdp"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:src="@drawable/ic_disliken"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:text="@string/test_comment"
+        android:fontFamily="@font/sans"
+        android:textSize="@dimen/_10sdp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

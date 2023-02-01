@@ -7,5 +7,6 @@
     <color name="primaryColor">#8BC34A</color>
     <color name="colorBorder">#BDBDBD</color>
     <color name="background_edittext">#4A4A4A</color>
+    <color name="textColorGray">#C3C3C3</color>
 
 </resources>

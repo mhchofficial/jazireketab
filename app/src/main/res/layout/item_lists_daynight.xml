@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:id="@+id/root_view"
+    android:gravity="start"
+    android:paddingStart="@dimen/_15sdp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/media_card_view"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_150sdp"
+        card_view:cardElevation="5dp"
+        card_view:cardCornerRadius="@dimen/_5sdp"
+        card_view:cardUseCompatPadding="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_mybooks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/testbook2"
+            android:scaleType="fitXY"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/is_audio_view"
+            android:layout_margin="@dimen/_3sdp"
+            android:layout_gravity="start|bottom"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            card_view:cardCornerRadius="@dimen/_5sdp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_headphone"
+                android:scaleType="fitXY"/>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/subject"
+        android:paddingStart="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="متن تست"
+        android:fontFamily="@font/sans"
+        android:textColor="@color/textColorBlack"
+        android:textSize="@dimen/_15sdp"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/ratting"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:text="@string/sample_rat"
+            android:textAlignment="center"
+            android:fontFamily="@font/sans"
+            android:textColor="@color/textColorBlack"
+            android:textSize="@dimen/_12sdp"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:src="@drawable/ic_star_daynight"
+            android:layout_marginStart="@dimen/_3sdp"/>
+
+
+        <TextView
+            android:id="@+id/price"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="48700 ت"
+            android:textAlignment="center"
+            android:fontFamily="@font/sans"
+            android:textColor="@color/textColorBlack"
+            android:textSize="@dimen/_12sdp"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

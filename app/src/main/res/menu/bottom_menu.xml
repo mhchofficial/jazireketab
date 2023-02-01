@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/mhome"
+        android:title="@string/home"
+        />
+    <item
+        android:id="@+id/cats"
+        android:icon="@drawable/list"
+        android:title="@string/cats"
+        />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/mglass"
+        android:title="@string/search"
+        />
+    <item
+        android:id="@+id/mybooks"
+        android:icon="@drawable/books"
+        android:title="@string/mybooks_title"
+        />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/prof"
+        android:title="@string/myprfoile"
+        />
+</menu>

@@ -15,4 +15,23 @@
     <string name="name_family">نام و نام خانوادگی</string>
     <string name="sended_code">کد ارسال شده</string>
     <string name="signup_to_jazireKetab">ثبت نام در جزیره‌کتاب</string>
+    <string name="my_comments">نظرات من</string>
+    <string name="help_support">راهنمایی و پشتیبانی</string>
+    <string name="booked_books">کتاب های نشان شده من</string>
+    <string name="about_us">درباره جزیره کتاب</string>
+    <string name="exist">خروج</string>
+    <string name="no_comment_found">هیچی پیدا نشد!</string>
+    <string name="nashr_test">نشر نون</string>
+    <string name="Athur_test">تونی فاگیولی</string>
+    <string name="name_test">ملیونی برای یک نفر</string>
+    <string name="test_comment">کتابی زیبا بود ، بهتر بود از نشر طلوع میزاشتید و قیمت کتاب هم بالا بود و قیمت کمتر بهتر است و اگر میشه امکان مارک کردن هم اضافه کنید خلاصه دمتون گرم زحمت کشیدید این کتاب زیبا رو گزاشتید مننو از زحماتتون وبه همه دوسداران کتاب پیشنهاد میکنم که این کتاب زیبارو بخونن</string>
+    <string name="text_in_reading">در حال مطالعه</string>
+    <string name="sample_text">نمونه متن</string>
+    <string name="sample_rat">4.8</string>
+    <string name="button_update">آپدیت کن</string>
+    <string name="cats">دسته‌بندی</string>
+    <string name="home">خانه</string>
+    <string name="search">جستجو</string>
+    <string name="mybooks_title">کتباخانه من</string>
+    <string name="myprfoile">حساب کاربری</string>
 </resources>

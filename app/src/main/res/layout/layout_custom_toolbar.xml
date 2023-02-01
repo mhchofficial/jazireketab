@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layoutDirection="rtl"
+    android:padding="@dimen/_5sdp"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/help"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|top"
+        android:src="@drawable/ic_help" />
+
+    <TextView
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/sans_medium"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/primaryColor"
+        android:id="@+id/toolbar_title" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="center|top"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/logo_green"
+        android:id="@+id/logo_tool"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_gravity="end|top"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_share"
+        android:id="@+id/share"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
