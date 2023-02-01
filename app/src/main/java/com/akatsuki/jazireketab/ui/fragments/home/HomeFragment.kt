@@ -57,64 +57,70 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity())[HomeViewModel::class.java]
 
 
-        val linearLayout = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
 
         //dfine all adapters
 
         val catAdapter = Topcat_Adapter()
-        val topListBlack = TopListBlack_Adapter()
-        val topListWhite = TopListWhite_Adapter()
+        val topListtwo = TopListBlack_Adapter()
+        val topListone = TopListWhite_Adapter()
         val btm_one = Btm_list_one_Adapter()
         val btm_two = Btm_list_two_Adapter()
         val audio_list = Audio_Adapter()
 
         binding.topcatsList.apply {
             adapter = catAdapter
-            layoutManager = linearLayout
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             setHasFixedSize(true)
 
         }
 
         binding.toplistOneRecycler.apply {
-            adapter = topListBlack
-            layoutManager = linearLayout
+            adapter = topListone
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            setHasFixedSize(true)
+
+        }
+
+        binding.toplistTwoRecycler.apply {
+            adapter = topListtwo
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             setHasFixedSize(true)
 
         }
 
         binding.posterListRecycler.apply {
             adapter = audio_list
-            layoutManager = linearLayout
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             setHasFixedSize(true)
 
         }
 
         binding.btmlistOneRecycler.apply {
             adapter = btm_one
-            layoutManager = linearLayout
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             setHasFixedSize(true)
 
         }
 
         binding.btmlistTwoRecycler.apply {
             adapter = btm_two
-            layoutManager = linearLayout
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             setHasFixedSize(true)
         }
 
 
-        if (viewModel?.isLoading?.value!!){
+        /*if (viewModel?.isLoading?.value!!){
             Log.e("loading", "true")
         }else{
             Log.e("loading", "false")
-        }
+        }*/
 
         viewModel?.response?.observe(viewLifecycleOwner, Observer {
             if (it.result == "successful"){
-                catAdapter.items = it.data.topCategory!!
-                topListWhite.items = it.data.listTwoTop.listBooks
-                topListBlack.items = it.data.listOneTop.listBooks
+                catAdapter.items = it.data.topCategory
+                topListtwo.items = it.data.listTwoTop.listBooks
+                topListone.items = it.data.listOneTop.listBooks
                 btm_one.items = it.data.listOneBtm.listBooks
                 btm_two.items = it.data.listTwoBtm.listBooks
                 audio_list.items = it.data.listAudio.datas
@@ -128,12 +134,11 @@ class HomeFragment : Fragment() {
                 binding.listSubjectTwo.text = it.data.listTwoTop.subject
                 binding.listSubNameTwo.text = it.data.listTwoTop.subName
 
-                //ONE TOP
-                binding.subjectPosterCenter.text = it.data.listAudio.name
-                binding.listSubNameOne.text = it.data.listOneTop.subName
-                //TWO TOP
-                binding.listSubjectTwo.text = it.data.listTwoTop.subject
-                binding.listSubNameTwo.text = it.data.listTwoTop.subName
+                //one btm
+                binding.listBottomSubjectOne.text = it.data.listOneBtm.subject
+
+                //two btm
+                binding.listBottomSubjectTwo.text = it.data.listTwoBtm.subject
 
                 //poster name
                 binding.subjectPosterCenter.text = it.data.listAudio.name

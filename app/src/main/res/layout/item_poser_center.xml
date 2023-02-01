@@ -15,7 +15,6 @@
         android:id="@+id/book_cover"
         android:layout_width="@dimen/_120sdp"
         android:layout_height="@dimen/_110sdp"
-        android:src="@drawable/testbook1"
         android:layout_margin="@dimen/_10sdp"
         android:scaleType="fitXY"/>
 
@@ -46,7 +45,6 @@
         android:fontFamily="@font/sans_medium"
         android:textColor="@color/white"
         android:textSize="@dimen/_10sdp"
-        android:text="یکی از طولانی ترین رمان ها \n و زیباترین ها"
         />
 
 

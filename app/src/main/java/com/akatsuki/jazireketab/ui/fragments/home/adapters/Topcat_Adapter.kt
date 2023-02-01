@@ -1,6 +1,7 @@
 package com.akatsuki.jazireketab.ui.fragments.home.adapters
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -47,6 +48,8 @@ class Topcat_Adapter : RecyclerView.Adapter<Topcat_Adapter.MyViewHolder>(){
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = items[position]
         holder.binding.topcatSubject.text = item.subject
+        Log.e("topcat", item.subject.toString())
+
         holder.binding.rootTopcat.setOnClickListener{
             onItemCLick.onClick(items[position])
         }
