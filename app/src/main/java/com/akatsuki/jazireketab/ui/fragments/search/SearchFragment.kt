@@ -5,7 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.akatsuki.jazireketab.MainActivity
 import com.akatsuki.jazireketab.R
+import com.akatsuki.jazireketab.databinding.FragmentCtegoryBinding
+import com.akatsuki.jazireketab.databinding.FragmentSearchBinding
+import com.akatsuki.jazireketab.ui.fragments.search.adapters.Suggestion_Adapter
+import com.akatsuki.jazireketab.ui.fragments.search.viewmodel.SearchViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +30,18 @@ class SearchFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
+    private var _binding: FragmentSearchBinding? = null
+    private val binding get() = _binding!!
+
+
+    private lateinit var _adapterSuggestion: Suggestion_Adapter
+
+
+
+
+    private var viewModel: SearchViewModel? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,7 +55,28 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        _binding = FragmentSearchBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        (activity as MainActivity).hideActionbar()
+        (activity as MainActivity).updatetitle("جستجو")
+
+        viewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
+        _adapterSuggestion = Suggestion_Adapter()
+        viewModel?.response?.observe(requireActivity(), Observer {
+            binding.sugectionView.visibility = View.VISIBLE
+            binding.searchResultRecyclerview.visibility = View.GONE
+            _adapterSuggestion.items = it.data
+
+        })
+
+        binding.hotsugetionRecyclerviewSearch.apply {
+            adapter = _adapterSuggestion
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            setHasFixedSize(true)
+        }
+
+        return view.rootView
     }
 
     companion object {

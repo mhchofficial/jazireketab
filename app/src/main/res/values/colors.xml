@@ -11,7 +11,7 @@
     <color name="testdark">#7A5534</color>
     <color name="orange">#F44336</color>
 
-
+    <color name="whitedaynight">#FFFFFFFF</color>
     <color name="textColorBlack">#FF000000</color>
     <color name="ColorTop">#C6C6C6</color>
     <color name="textColorGray">#454545</color>
@@ -19,4 +19,6 @@
     <color name="textColorWhite">#FFFFFFFF</color>
     <color name="background_edittext">#FFFFFFFF</color>
     <color name="primaryColor">#8BC34A</color>
+    <color name="Divider">#F6F6F6</color>
+    <color name="DividerDaynight">#F6F6F6</color>
 </resources>

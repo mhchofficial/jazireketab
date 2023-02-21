@@ -50,6 +50,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:textSize="@dimen/_16sdp"
+            android:inputType="number"
             android:fontFamily="@font/sans_medium"
             android:textColor="@color/textColorBlack"
             android:layout_marginTop="@dimen/_10sdp"

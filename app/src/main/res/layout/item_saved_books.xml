@@ -5,6 +5,7 @@
     android:orientation="horizontal"
     android:layoutDirection="rtl"
     android:padding="@dimen/_10sdp"
+    android:id="@+id/root_view"
     android:layout_height="wrap_content">
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/_60sdp"
@@ -17,6 +18,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/testbook1"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/is_audio_view"
+            android:layout_margin="@dimen/_3sdp"
+            android:layout_gravity="start|bottom"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_5sdp">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_headphone"
+                android:scaleType="fitXY"/>
+        </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -29,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/name_test"
-            android:textSize="@dimen/_11sdp"
+            android:textSize="@dimen/_12sdp"
             android:fontFamily="@font/sans_medium"
             android:textColor="@color/textColorBlack"
             />
@@ -38,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Athur_test"
-            android:textSize="@dimen/_7sdp"
+            android:textSize="@dimen/_10sdp"
             android:fontFamily="@font/sans_medium"
             android:textColor="@color/textColorGray"
             />
@@ -47,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nashr_test"
-            android:textSize="@dimen/_7sdp"
+            android:textSize="@dimen/_10sdp"
             android:fontFamily="@font/sans_medium"
             android:textColor="@color/textColorGray"
             />
@@ -58,20 +73,22 @@
            android:layout_height="wrap_content"
            android:orientation="horizontal">
            <RatingBar
+               android:theme="@style/RatingBar"
                android:id="@+id/ratting"
-               android:layout_width="100dp"
+               android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_gravity="center_vertical"
                android:numStars="5"
                android:isIndicator="true"
                style="@style/Widget.AppCompat.RatingBar.Small"/>
            <TextView
+               android:id="@+id/book_price"
                android:gravity="end"
                android:layout_weight="1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="37500 ت"
-               android:textSize="@dimen/_7sdp"
+               android:textSize="@dimen/_10sdp"
                android:fontFamily="@font/sans_medium"
                android:textColor="@color/textColorGray"
                />

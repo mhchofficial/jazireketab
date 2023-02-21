@@ -37,11 +37,12 @@
 
     <TextView
         android:id="@+id/caption"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_gravity="end|center"
+        android:layout_margin="@dimen/_11sdp"
+        android:layout_gravity="end|center_vertical"
         android:layout_width="@dimen/_120sdp"
         android:layout_height="wrap_content"
         android:maxLines="3"
+        android:padding="@dimen/_7sdp"
         android:fontFamily="@font/sans_medium"
         android:textColor="@color/white"
         android:textSize="@dimen/_10sdp"

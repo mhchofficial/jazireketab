@@ -1,6 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/app_navigation">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
 
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.share.ShareFragment"
+        android:label="fragment_share"
+        tools:layout="@layout/fragment_share" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.list_fragment.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/bookDetailsFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.book_details.BookDetailsFragment"
+        android:label="fragment_book_details"
+        tools:layout="@layout/fragment_book_details" />
+    <fragment
+        android:id="@+id/audioDetailsFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.audio_details.AudioDetailsFragment"
+        android:label="fragment_audio_details"
+        tools:layout="@layout/fragment_audio_details" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_audioDetailsFragment"
+            app:destination="@id/audioDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_shareFragment"
+            app:destination="@id/shareFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.categories.CategoryFragment"
+        android:label="fragment_ctegory"
+        tools:layout="@layout/fragment_ctegory" >
+        <action
+            android:id="@+id/action_categoryFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_bookDetailsFragment2"
+            app:destination="@id/bookDetailsFragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_audioDetailsFragment"
+            app:destination="@id/audioDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.help.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/profileMainFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.profile.main.ProfileMainFragment"
+        android:label="fragment_profile_main"
+        tools:layout="@layout/fragment_profile_main" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/myBooksFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.mybooks.MyBooksFragment"
+        android:label="fragment_my_books"
+        tools:layout="@layout/fragment_my_books" />
+    <fragment
+        android:id="@+id/enterLoginFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.login.EnterLoginFragment"
+        android:label="fragment_enter_login"
+        tools:layout="@layout/fragment_enter_login" >
+        <action
+            android:id="@+id/action_enterLoginFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_verifyLoginFragment"
+            app:destination="@id/verifyLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyLoginFragment"
+        android:name="com.akatsuki.jazireketab.ui.fragments.login.VerifyLoginFragment"
+        android:label="fragment_verify_login"
+        tools:layout="@layout/fragment_verify_login" >
+        <action
+            android:id="@+id/action_verifyLoginFragment_to_profileMainFragment"
+            app:destination="@id/profileMainFragment" />
+    </fragment>
 </navigation>

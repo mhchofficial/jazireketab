@@ -7,27 +7,27 @@
 
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/mhome"
         android:title="@string/home"
         />
     <item
-        android:id="@+id/cats"
+        android:id="@+id/categoryFragment"
         android:icon="@drawable/list"
         android:title="@string/cats"
         />
     <item
-        android:id="@+id/search"
+        android:id="@+id/searchFragment"
         android:icon="@drawable/mglass"
         android:title="@string/search"
         />
     <item
-        android:id="@+id/mybooks"
+        android:id="@+id/myBooksFragment"
         android:icon="@drawable/books"
         android:title="@string/mybooks_title"
         />
     <item
-        android:id="@+id/profile"
+        android:id="@+id/enterLoginFragment"
         android:icon="@drawable/prof"
         android:title="@string/myprfoile"
         />

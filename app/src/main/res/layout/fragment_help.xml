@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:background="@color/DividerDaynight"
+    tools:context=".ui.fragments.help.HelpFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitedaynight"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/sans_medium"
+            android:textSize="@dimen/_22sdp"
+            android:textColor="@color/textColorBlack"
+            android:text="پشتیبانی" />
+
+        <TextView
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/sans"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/textColorBlack"
+            android:text="کاربر عزیز اگر مشکلی دارید ما به صورت آنلاین در خدمتتون هستیم" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitedaynight"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/helptelegram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/telegram"/>
+            <TextView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/sans"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/textColorBlack"
+                android:text="ارتباط با ما در تلگرام" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/helpwhatsup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/whatsapp"/>
+            <TextView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/sans"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/textColorBlack"
+                android:text="ارتباط با ما در واتس آپ" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/helpmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/mail"/>
+            <TextView
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/sans"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/textColorBlack"
+                android:text="تماس با ما از طریق ایمیل" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

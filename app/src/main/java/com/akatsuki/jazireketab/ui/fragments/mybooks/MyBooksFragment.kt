@@ -8,11 +8,14 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.akatsuki.jazireketab.utils.ToastIcon
+import com.akatsuki.jazireketab.MainActivity
 import com.akatsuki.jazireketab.R
 import com.akatsuki.jazireketab.databinding.FragmentMyBooksBinding
+import com.akatsuki.jazireketab.ui.fragments.mybooks.adapter.Mybooks_Adapter
+import com.akatsuki.jazireketab.ui.fragments.mybooks.viewmodels.MyBooksViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,6 +37,9 @@ class MyBooksFragment : Fragment(),
     private val binding get() = _binding!!
     private lateinit var status: Spinner
 
+    private lateinit var _adapter: Mybooks_Adapter
+
+    private var viewModel: MyBooksViewModel? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -50,15 +56,27 @@ class MyBooksFragment : Fragment(),
         val view = binding.root
         // Inflate the layout for this fragment
 
+        (activity as MainActivity).hideActionbar()
+        (activity as MainActivity).updatetitle("کتابخانه من")
 
+        viewModel = ViewModelProvider(requireActivity())[MyBooksViewModel::class.java]
+        _adapter = Mybooks_Adapter()
+
+        val recyclerview = binding.recyclerViewMybooks
+        val layout = GridLayoutManager(requireContext(), 3)
+        recyclerview.layoutManager = layout
+        recyclerview.adapter = _adapter
+
+        viewModel?.response?.observe(requireActivity(), Observer {
+            _adapter.items = it.data
+
+        })
 
         catList = arrayListOf("در حال مطالعه", "تمام شده")
         status = binding.mybookStatus
         status.onItemSelectedListener = this
 
-        val recyclerview = binding.recyclerViewMybooks
-        val layout = GridLayoutManager(requireContext(), 3)
-        recyclerview.layoutManager = layout
+
 
 
         return  view.rootView

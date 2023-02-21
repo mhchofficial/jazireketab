@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="rtl"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -19,16 +20,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:title="Yelp"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark"
-        app:titleTextColor="@color/white"/>
+        app:theme="@style/ThemeOverlay.AppCompat.Light"
+        >
 
 
-    <FrameLayout
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/share"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="end|top"
+            android:src="@drawable/ic_share"
+            android:layout_marginEnd="@dimen/_10sdp"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/help"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="start|top"
+            android:src="@drawable/ic_help"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sans_medium"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/primaryColor"
+            android:id="@+id/toolbar_title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logo_tool"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="center|top"
+            android:src="@drawable/logo_green"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.fragment.app.FragmentContainerView
+        app:theme="@style/ThemeOverlay.AppCompat.Light"
         android:id="@+id/my_nav_host_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/app_navigation"
         app:defaultNavHost="true"
         android:layout_marginBottom="@dimen/_62sdp"
         app:layout_constraintBottom_toBottomOf="parent"

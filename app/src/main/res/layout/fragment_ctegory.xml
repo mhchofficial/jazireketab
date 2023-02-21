@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.categories.CtegoryFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    tools:context=".ui.fragments.categories.CategoryFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+    <ExpandableListView
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/expandableListView"
         android:layout_height="match_parent"
-        tools:itemCount="4"
-        tools:listitem="@layout/item_spinner_category"/>
+        android:layout_width="match_parent"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+        android:divider="@color/ColorTop"
+        android:dividerHeight="0.5dp" />
 
-</FrameLayout>
+</LinearLayout>

@@ -4,4 +4,10 @@
         <item name="android:windowExitAnimation">@anim/fade_out</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorBorder</item>
+        <item name="colorControlActivated">@color/primaryColor</item>
+    </style>
+
+
 </resources>

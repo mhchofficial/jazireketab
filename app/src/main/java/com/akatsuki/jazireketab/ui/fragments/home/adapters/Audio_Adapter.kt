@@ -67,8 +67,8 @@ class Audio_Adapter : RecyclerView.Adapter<Audio_Adapter.MyViewHolder>(){
 
 
 
-    fun setOnItemClickListener(onDeleteNotificationById: OnItemCLick){
-        this.onItemCLick = onDeleteNotificationById
+    fun setOnItemClickListener(onNotificationById: OnItemCLick){
+        this.onItemCLick = onNotificationById
     }
 
     interface OnItemCLick{

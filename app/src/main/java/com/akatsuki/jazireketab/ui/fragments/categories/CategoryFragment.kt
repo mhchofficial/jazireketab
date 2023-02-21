@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.akatsuki.jazireketab.R
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.akatsuki.jazireketab.MainActivity
+import com.akatsuki.jazireketab.databinding.FragmentCtegoryBinding
+import com.akatsuki.jazireketab.ui.fragments.categories.viewmodels.CatViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +26,14 @@ class CategoryFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
+    private var _binding: FragmentCtegoryBinding? = null
+    private val binding get() = _binding!!
+
+
+
+
+    private var viewModel: CatViewModel? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -35,7 +47,28 @@ class CategoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ctegory, container, false)
+        _binding = FragmentCtegoryBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+
+        (activity as MainActivity).hideActionbar()
+        (activity as MainActivity).updatetitle("دسته‌بندی")
+
+        viewModel = ViewModelProvider(requireActivity())[CatViewModel::class.java]
+
+
+
+        viewModel?.response?.observe(requireActivity(), Observer {
+            val _adapter = CategoryExpandableAdapter(requireContext(), it.data)
+            binding.expandableListView.setAdapter(_adapter)
+        })
+
+
+
+
+
+        return view.rootView
+
     }
 
     companion object {

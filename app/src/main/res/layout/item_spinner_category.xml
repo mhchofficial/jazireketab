@@ -3,12 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ExpandableListView
-        android:id="@+id/expandableListView"
-        android:layout_height="match_parent"
+    <TextView
+        android:id="@+id/category_subject"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
         android:layout_width="match_parent"
-        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
-        android:divider="@color/ColorTop"
-        android:dividerHeight="0.5dp" />
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColorBlack"
+        android:fontFamily="@font/sans_medium"
+        android:textSize="@dimen/_13sdp"
+        />
+
 
 </FrameLayout>

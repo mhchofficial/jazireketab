@@ -38,6 +38,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginorsignup"
         android:text="@string/loginOrsignup"
         android:textSize="@dimen/_13sdp"
         android:fontFamily="@font/sans"

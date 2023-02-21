@@ -34,4 +34,8 @@
     <string name="search">جستجو</string>
     <string name="mybooks_title">کتباخانه من</string>
     <string name="myprfoile">حساب کاربری</string>
+    <string name="about_book">درباره کتاب</string>
+    <string name="test_bout_boook">ssssss</string>
+    <string name="detail_book">جزئیات</string>
+    <string name="comment">نظرات ثبت شده</string>
 </resources>

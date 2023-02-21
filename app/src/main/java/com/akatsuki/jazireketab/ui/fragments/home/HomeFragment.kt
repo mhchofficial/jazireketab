@@ -6,14 +6,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Adapter
+import com.akatsuki.jazireketab.MainActivity
 import com.akatsuki.jazireketab.R
 import com.akatsuki.jazireketab.databinding.FragmentHomeBinding
 import com.akatsuki.jazireketab.databinding.FragmentMyBooksBinding
 import com.akatsuki.jazireketab.models.TopCatModel
+import com.akatsuki.jazireketab.models.test.Books
+import com.akatsuki.jazireketab.models.test.DataX
 import com.akatsuki.jazireketab.ui.fragments.home.adapters.*
 import com.akatsuki.jazireketab.ui.fragments.home.viewmodels.HomeViewModel
 
@@ -52,12 +60,14 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        (activity as MainActivity).showActionbar()
 
         //init viewmodel
         viewModel = ViewModelProvider(requireActivity())[HomeViewModel::class.java]
 
 
-
+        (activity as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false);
+        (activity as MainActivity).supportActionBar?.setDisplayShowHomeEnabled(false);
 
         //dfine all adapters
 
@@ -109,12 +119,50 @@ class HomeFragment : Fragment() {
             setHasFixedSize(true)
         }
 
+        audio_list.setOnItemClickListener(object: Audio_Adapter.OnItemCLick{
+            override fun onClick(item: DataX) {
+                findNavController().navigate(R.id.action_homeFragment_to_audioDetailsFragment)
+            }
 
-        /*if (viewModel?.isLoading?.value!!){
-            Log.e("loading", "true")
-        }else{
-            Log.e("loading", "false")
-        }*/
+        })
+
+
+        topListone.setOnItemClickListener(object: TopListWhite_Adapter.OnItemCLick{
+
+            override fun onClick(item: Books) {
+                findNavController().navigate(R.id.action_homeFragment_to_bookDetailsFragment)
+            }
+
+        })
+
+        binding.watchAllOne.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_listFragment)
+        }
+
+        binding.watchAllTwo.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_listFragment)
+        }
+
+        binding.watchAllListTwo.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_listFragment)
+        }
+
+        binding.watchBottomListTwo.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_listFragment)
+        }
+
+        (activity as MainActivity).toolbar.findViewById<ImageView>(R.id.share).setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_shareFragment)
+        }
+
+
+        (activity as MainActivity).toolbar.findViewById<ImageView>(R.id.help).setOnClickListener {
+            (activity as MainActivity).navController.navigate(R.id.action_homeFragment_to_helpFragment)
+        }
+
+
+
+
 
         viewModel?.response?.observe(viewLifecycleOwner, Observer {
             if (it.result == "successful"){
