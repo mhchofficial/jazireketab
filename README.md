@@ -1,7 +1,7 @@
 # Ir Epub store
 A Application looks like FaraKetab for buy and sell Epub books
 
-this is one of my first app when i was leaning kotlin and mvvm
+this is one of my first app when i was learning kotlin and mvvm
 u can see cods and use it if u need
 
 
